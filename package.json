@@ -1,11 +1,16 @@
 {
-"scripts": {
-    "build": "tsc",
-    "post-build": "node build/post-build.js",
-    "start": "node build/index.js",
-    "watch": "nodemon",
-    "test": "mocha -t 20000 --reporter spec --exit 'build/**/*.spec.js'",
-    "testonly": "mocha -t 20000 --exit 'build/**/*.spec.js'",
-    "build-start": "yarn build && yarn start"
-  }
+    "scripts": {
+        "build": "tsc",
+        "post-build": "node build/post-build.js",
+        "start": "node build/index.js",
+        "watch": "nodemon",
+        "test": "mocha -t 20000 --reporter spec --exit 'build/**/*.spec.js'",
+        "testonly": "mocha -t 20000 --exit 'build/**/*.spec.js'",
+        "build-start": "yarn build && yarn start"
+    },
+    "dependencies": {
+        "@samuraitruong/coinspot-api": "^1.0.4",
+        "@types/cheerio": "^0.22.31",
+        "cheerio": "^1.0.0-rc.10"
+    }
 }
